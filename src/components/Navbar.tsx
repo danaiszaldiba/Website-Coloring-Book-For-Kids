@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Book, Menu, X, ChevronDown, Search } from 'lucide-react';
+import { Menu, X, ChevronDown, Search } from 'lucide-react';
+import Logo from './Logo';
 
 const bookCategories = [
   { name: 'Animals', path: '/books/animals' },
@@ -37,10 +38,7 @@ const Navbar = () => {
       <nav className={`bg-white w-full z-50 fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out ${isSticky ? 'shadow-lg' : ''}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
-            <div className="flex items-center">
-              <Book className="h-8 w-8 text-purple-600" />
-              <span className="ml-2 text-xl font-bold text-purple-600">ColorFun</span>
-            </div>
+            <Logo />
             
             <div className="hidden md:flex items-center space-x-8">
               <div className="flex items-center">

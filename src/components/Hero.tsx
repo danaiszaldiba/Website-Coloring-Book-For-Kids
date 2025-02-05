@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import HeroImage from './img/HERO-IMG.png';
 
 const Hero = () => {
   return (
@@ -19,7 +20,7 @@ const Hero = () => {
                 <div className="rounded-md shadow">
                   <a
                     href="#"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 md:py-4 md:text-lg md:px-10"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 md:py-4 md:text-lg md:px-10"
                   >
                     Shop Now
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -28,7 +29,7 @@ const Hero = () => {
                 <div className="mt-3 sm:mt-0 sm:ml-3">
                   <a
                     href="#"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-purple-600 bg-purple-100 hover:bg-purple-200 md:py-4 md:text-lg md:px-10"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-purple-600 bg-purple-50 hover:bg-purple-100 md:py-4 md:text-lg md:px-10"
                   >
                     Free Pages
                   </a>
@@ -39,11 +40,13 @@ const Hero = () => {
         </div>
       </div>
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <img
-          className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src="https://img.freepik.com/free-vector/kids-learning-concept-illustration_114360-1607.jpg"
-          alt="Vector illustration of children coloring and learning together"
-        />
+        <div className="relative h-72 sm:h-96 md:h-[32rem] lg:h-full w-full mx-auto flex items-center justify-center p-8">
+          <img
+            src={HeroImage}
+            alt="Coloring book illustration"
+            className="w-auto h-auto max-h-full max-w-full object-contain rounded-lg"
+          />
+        </div>
       </div>
     </div>
   );
