@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import FeaturedBooks from './components/FeaturedBooks';
 import Testimonials from './components/Testimonials';
+import BookCarousel from './components/BookCarousel';
 import Footer from './components/Footer';
 import Blog from './components/Blog';
 import AnimalsBooks from './components/AnimalsBooks';
@@ -21,6 +22,7 @@ function App() {
               <Hero />
               <FeaturedBooks />
               <Testimonials />
+              <BookCarousel />
             </main>
           } />
           <Route path="/blog" element={<Blog />} />

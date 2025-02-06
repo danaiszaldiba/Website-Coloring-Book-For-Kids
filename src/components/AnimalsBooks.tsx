@@ -108,19 +108,19 @@ const AnimalsBooks = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-4">
-                <div className="flex justify-between items-center">
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-3">
                   <h3 className="text-lg font-medium text-gray-900">{book.title}</h3>
-                  <p className="text-lg font-medium text-purple-600">${book.price}</p>
+                  <p className="text-lg font-medium text-purple-600 ml-2">${book.price}</p>
                 </div>
-                <p className="mt-1 text-sm text-gray-500">Age: {book.ageGroup}</p>
-                <p className="mt-1 text-sm text-gray-600 line-clamp-2">{book.description}</p>
-                <div className="mt-2 flex items-center">
+                <p className="mb-2 text-sm text-gray-500">Age: {book.ageGroup}</p>
+                <p className="mb-3 text-sm text-gray-600 line-clamp-2">{book.description}</p>
+                <div className="mb-4 flex items-center">
                   {[...Array(book.rating)].map((_, i) => (
                     <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <button className="mt-3 w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white py-2 px-4 rounded-md transition-colors font-medium">
+                <button className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white py-2 px-4 rounded-md transition-colors font-medium">
                   Buy Now
                 </button>
               </div>
