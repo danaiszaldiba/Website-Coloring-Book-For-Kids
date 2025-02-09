@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Book, Download, Heart, Mail, Palette, ShoppingCart, Users } from 'lucide-react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import SalesCounter from './components/SalesCounter';
 import FeaturedBooks from './components/FeaturedBooks';
 import Testimonials from './components/Testimonials';
 import BookCarousel from './components/BookCarousel';
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={
             <main>
               <Hero />
+              <SalesCounter />
               <FeaturedBooks />
               <Testimonials />
               <BookCarousel />
