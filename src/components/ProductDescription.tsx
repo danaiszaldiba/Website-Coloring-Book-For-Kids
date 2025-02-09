@@ -16,16 +16,58 @@ interface ProductDescriptionProps {
 const sampleData: ProductDescriptionProps[] = [
   {
     id: 1,
-    title: "Safari Adventures",
-    price: 14.99,
-    image: "https://images.unsplash.com/photo-1557507175-3e6c3b0468b4?ixlib=rb-4.0.3",
+    title: "Animal Adventures",
+    price: 12.99,
+    image: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
     rating: 5,
-    ageGroup: "4-8 years",
-    description: "Embark on an exciting journey through the African savanna with our Safari Adventures coloring book. Each page features detailed illustrations of majestic lions, gentle elephants, towering giraffes, and other fascinating wildlife. This educational coloring experience helps children learn about different animals while developing their creativity and fine motor skills.",
+    ageGroup: "3-6 years",
+    description: "Embark on an exciting journey with our Animal Adventures coloring book. Each page features adorable and engaging animal illustrations that help children develop their creativity while learning about different creatures. Perfect for young artists beginning their coloring journey!",
     samplePages: [
-      "https://images.unsplash.com/photo-1557507175-3e6c3b0468b4?ixlib=rb-4.0.3",
-      "https://images.unsplash.com/photo-1557507175-3e6c3b0468b4?ixlib=rb-4.0.3",
-      "https://images.unsplash.com/photo-1557507175-3e6c3b0468b4?ixlib=rb-4.0.3"
+      "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-4.0.3",
+      "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-4.0.3",
+      "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-4.0.3"
+    ]
+  },
+  {
+    id: 2,
+    title: "Magical Unicorns",
+    price: 14.99,
+    image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1071&q=80",
+    rating: 4,
+    ageGroup: "4-8 years",
+    description: "Enter a magical world of unicorns and enchantment! This coloring book is filled with whimsical unicorn designs, rainbows, and magical scenes that will delight children and spark their imagination. Each page offers a new magical adventure to color!",
+    samplePages: [
+      "https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3",
+      "https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3",
+      "https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3"
+    ]
+  },
+  {
+    id: 3,
+    title: "Ocean Wonders",
+    price: 13.99,
+    image: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+    rating: 5,
+    ageGroup: "5-10 years",
+    description: "Dive deep into an underwater adventure with our Ocean Wonders coloring book. Discover amazing sea creatures, beautiful coral reefs, and mysterious deep-sea scenes. This educational coloring experience teaches children about marine life while having fun!",
+    samplePages: [
+      "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-4.0.3",
+      "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-4.0.3",
+      "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-4.0.3"
+    ]
+  },
+  {
+    id: 4,
+    title: "Dinosaur Adventure",
+    price: 15.99,
+    image: "https://images.unsplash.com/photo-1569144157591-c60f3f82f137?ixlib=rb-4.0.3",
+    rating: 5,
+    ageGroup: "6-12 years",
+    description: "Travel back in time with our Dinosaur Adventure coloring book! Featuring detailed illustrations of various dinosaur species, prehistoric landscapes, and fascinating fossil discoveries. Perfect for young paleontologists who love to color and learn about these amazing creatures.",
+    samplePages: [
+      "https://images.unsplash.com/photo-1569144157591-c60f3f82f137?ixlib=rb-4.0.3",
+      "https://images.unsplash.com/photo-1569144157591-c60f3f82f137?ixlib=rb-4.0.3",
+      "https://images.unsplash.com/photo-1569144157591-c60f3f82f137?ixlib=rb-4.0.3"
     ]
   }
 ];

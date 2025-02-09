@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const books = [
   {
@@ -72,7 +73,7 @@ const BookCarousel = () => {
                   key={book.id}
                   className="w-1/4 flex-shrink-0 px-4"
                 >
-                  <div className="group relative transform hover:shadow-xl transition-all duration-300 rounded-lg">
+                  <Link to={`/product/${book.id}`} className="group relative transform hover:shadow-xl transition-all duration-300 rounded-lg">
                     <div className="relative w-full h-60 bg-white rounded-lg overflow-hidden">
                       <img
                         src={book.image}
@@ -96,11 +97,11 @@ const BookCarousel = () => {
                           <Star key={i} className="h-3 w-3 text-yellow-400 fill-current" />
                         ))}
                       </div>
-                      <button className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white py-2 px-4 rounded-md transition-colors text-sm">
-                        Add to Cart
-                      </button>
+                      <div className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white py-2 px-4 rounded-md transition-colors text-sm text-center">
+                        View Details
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               ))}
             </div>
