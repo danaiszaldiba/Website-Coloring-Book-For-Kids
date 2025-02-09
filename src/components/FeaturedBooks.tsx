@@ -83,7 +83,7 @@ const FeaturedBooks = () => {
                 </div>
               </Link>
             ) : (
-              <div key={book.id} className="group relative transform hover:shadow-xl transition-all duration-300 rounded-lg">
+              <Link to={`/product/${book.id}`} key={book.id} className="group relative transform hover:shadow-xl transition-all duration-300 rounded-lg">
                 <div className="relative w-full h-60 bg-white rounded-lg overflow-hidden">
                   <img
                     src={book.image}
@@ -111,7 +111,7 @@ const FeaturedBooks = () => {
                     Add to Cart
                   </button>
                 </div>
-              </div>
+              </Link>
             )
           ))}
         </div>

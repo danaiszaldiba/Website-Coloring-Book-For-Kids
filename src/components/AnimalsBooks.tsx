@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const animalBooks = [
   {
@@ -100,7 +101,7 @@ const AnimalsBooks = () => {
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {animalBooks.map((book) => (
-            <div key={book.id} className="group relative bg-white rounded-lg shadow-lg overflow-hidden">
+            <Link to={`/product/${book.id}`} key={book.id} className="group relative bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="relative w-full h-60 bg-white rounded-t-lg overflow-hidden group-hover:opacity-75 transition-opacity">
                 <img
                   src={book.image}
@@ -124,7 +125,7 @@ const AnimalsBooks = () => {
                   Buy Now
                 </button>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

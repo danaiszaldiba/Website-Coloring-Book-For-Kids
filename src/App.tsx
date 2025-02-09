@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Blog from './components/Blog';
 import AnimalsBooks from './components/AnimalsBooks';
 import About from './components/About';
+import ProductDescription from './components/ProductDescription';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/books/animals" element={<AnimalsBooks />} />
           <Route path="/about" element={<About />} />
+          <Route path="/product/:id" element={<ProductDescription />} />
         </Routes>
         <Footer />
       </div>
