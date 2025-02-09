@@ -13,6 +13,54 @@ interface ProductDescriptionProps {
   samplePages?: string[];
 }
 
+const reviews = [
+  {
+    id: 1,
+    rating: 5,
+    comment: "My daughter loves this coloring book! The illustrations are beautiful and engaging.",
+    author: "Emily R.",
+    date: "2023-05-15"
+  },
+  {
+    id: 2,
+    rating: 4,
+    comment: "Great quality paper and wonderful designs. Perfect for my 6-year-old.",
+    author: "Michael S.",
+    date: "2023-05-10"
+  },
+  {
+    id: 3,
+    rating: 5,
+    comment: "The variety of illustrations keeps my child entertained for hours!",
+    author: "Sarah L.",
+    date: "2023-05-08"
+  }
+];
+
+const relatedProducts = [
+  {
+    id: 5,
+    title: "Fantasy Dragons",
+    price: 13.99,
+    image: "https://images.unsplash.com/photo-1582457601528-849ac59c7c9c?ixlib=rb-4.0.3",
+    rating: 5
+  },
+  {
+    id: 6,
+    title: "Space Adventure",
+    price: 14.99,
+    image: "https://images.unsplash.com/photo-1516467508483-a7212febe31a?ixlib=rb-4.0.3",
+    rating: 4
+  },
+  {
+    id: 7,
+    title: "Fairy Garden",
+    price: 12.99,
+    image: "https://images.unsplash.com/photo-1578326457399-3b34dbbf23b8?ixlib=rb-4.0.3",
+    rating: 5
+  }
+];
+
 const sampleData: ProductDescriptionProps[] = [
   {
     id: 1,
@@ -147,9 +195,66 @@ const ProductDescription = () => {
 
             <div className="mt-8">
               <button className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white py-4 px-8 rounded-md transition-colors font-medium text-lg flex items-center justify-center">
-                Add to Cart
+                Buy Now
               </button>
             </div>
+          </div>
+        </div>
+
+        {/* User Reviews Section */}
+        <div className="mt-16">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Customer Reviews</h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {reviews.map((review) => (
+              <div key={review.id} className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <div className="flex items-center">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <span className="ml-2 text-sm text-gray-500">({review.rating} stars)</span>
+                </div>
+                <p className="text-gray-600 mb-4">{review.comment}</p>
+                <div className="flex justify-between items-center text-sm text-gray-500">
+                  <span>{review.author}</span>
+                  <span>{review.date}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Related Products Section */}
+        <div className="mt-16">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">You May Also Like</h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {relatedProducts.map((relatedProduct) => (
+              <Link
+                key={relatedProduct.id}
+                to={`/product/${relatedProduct.id}`}
+                className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow"
+              >
+                <div className="aspect-w-1 aspect-h-1 bg-gray-200 overflow-hidden">
+                  <img
+                    src={relatedProduct.image}
+                    alt={relatedProduct.title}
+                    className="w-full h-full object-center object-cover group-hover:scale-105 transition-transform duration-200"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-lg font-medium text-gray-900 mb-2">{relatedProduct.title}</h3>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      {[...Array(relatedProduct.rating)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                      ))}
+                    </div>
+                    <span className="text-lg font-medium text-purple-600">${relatedProduct.price}</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
