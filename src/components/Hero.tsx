@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import HeroImage from './img/HERO-IMG.png';
+import HeroImage from './img/HERO-IMG4.png';
 
 const Hero = () => {
   return (
@@ -40,11 +40,11 @@ const Hero = () => {
         </div>
       </div>
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <div className="relative h-72 sm:h-96 md:h-[32rem] lg:h-full w-full mx-auto flex items-center justify-center p-8">
+        <div className="relative h-64 sm:h-80 md:h-96 lg:h-full w-full flex items-center justify-center px-4 sm:px-6 lg:px-8 lg:pr-12">
           <img
             src={HeroImage}
             alt="Coloring book illustration"
-            className="w-auto h-auto max-h-full max-w-full object-contain rounded-lg"
+            className="w-full h-full object-contain"
           />
         </div>
       </div>
